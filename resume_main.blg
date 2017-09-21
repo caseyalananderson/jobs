@@ -1,0 +1,5 @@
+[0] Config.pm:343> INFO - This is Biber 2.5
+[0] Config.pm:346> INFO - Logfile is 'resume_main.blg'
+[53] biber:290> INFO - === Wed Sep 20, 2017, 20:17:54
+[175] Biber.pm:352> INFO - Reading 'resume_main.bcf'
+[365] Utils.pm:149> WARN - No data sources defined!
