@@ -1,0 +1,100 @@
+% Casey Anderson Resume (Modular Version)
+%
+% Compile:
+%  xetex $.tex
+%  biber $.bcf
+%  xetex $.tex
+
+% NOTES:
+%  - \vspace{Xmm} shifts vertical spacing between text lines.
+%    This is used frequently between sections to manually adjust spacings
+
+% ----------------------------------------------------------------------------
+% - Set up the document class
+% ----------------------------------------------------------------------------
+\documentclass[a4paper,10pt]{article}
+
+% ----------------------------------------------------------------------------
+% Add the preamble (ie, packages and formatting definitions)
+% ----------------------------------------------------------------------------
+\input{preamble}
+
+% ----------------------------------------------------------------------------
+% Add the bibliography main document to be used
+% ----------------------------------------------------------------------------
+\addbibresource{bibliography.bib}
+
+% ----------------------------------------------------------------------------
+% Begin the main document 
+% ----------------------------------------------------------------------------
+\begin{document}
+
+% ----------------------------------------------------------------------------
+% Set the main body of the document (page #, sloppy)
+% ----------------------------------------------------------------------------
+\pagestyle{empty} 		% non-numbered pages
+\sloppy 			% sloppy for flush left and right edges
+
+% ----------------------------------------------------------------------------
+% Include my header section of the document
+% ----------------------------------------------------------------------------
+\input{header}  	% Header file (small font)
+
+% ----------------------------------------------------------------------------
+% Executive Summary (normal size needed since HEADER varies)
+% ----------------------------------------------------------------------------
+\normalsize \input{executivesummary} \vspace{-0mm}
+
+% ----------------------------------------------------------------------------
+% Work & Research Experience
+% ----------------------------------------------------------------------------
+%\input{workexperience_section} \vspace{-2mm}
+
+% ----------------------------------------------------------------------------
+% Leadership & Volunteer Experience
+% ----------------------------------------------------------------------------
+%\input{volunteerexperience_section} \vspace{-2mm}
+
+% ----------------------------------------------------------------------------
+% Computer Skills
+% ----------------------------------------------------------------------------
+\input{computerskills_section} \vspace{-5mm}
+
+
+% ----------------------------------------------------------------------------
+% Edcuation
+% ----------------------------------------------------------------------------
+%\input{education_section} \vspace{-2mm}
+
+% ----------------------------------------------------------------------------
+% References (this is just the section that points to them...)
+% ----------------------------------------------------------------------------
+%\input{references_section} \vspace{3mm}
+\input{references} \vspace{3mm}
+% ----------------------------------------------------------------------------
+% Include Footnotes of the main Resume (I changed size)
+% ----------------------------------------------------------------------------
+%\footnotesize \input{footnote_clearance} 
+
+% ----------------------------------------------------------------------------
+% Move the "CV" section (Publications / Presentations) to a new page
+% ----------------------------------------------------------------------------
+\newpage
+
+% ----------------------------------------------------------------------------
+% Publications & Presentations (Made this large just because)
+% ----------------------------------------------------------------------------
+%\large \input{publication_section}
+
+% ----------------------------------------------------------------------------
+% Publications & Presentations (Made this large just because)
+% ----------------------------------------------------------------------------
+%\large \input{patents_section_bib}
+
+% ----------------------------------------------------------------------------
+% Classes 
+% ----------------------------------------------------------------------------
+\normalsize \input{classes_section}
+
+
+\end{document}
